@@ -1,0 +1,8 @@
+{
+  "welcome": "Willkommen bei My React App",
+  "description": "This is a multilingual app.",
+  "adduser": "Benutzer hinzufügen",
+  "name": "Name",
+  "gender": "Geschlecht",
+  "contactlist": "Kontaktliste"
+}
