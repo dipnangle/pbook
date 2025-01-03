@@ -8,6 +8,7 @@ import ContactList from './components/ContactList'
 import Page_404 from './components/Page_404'
 import './Tailwind.css'
 import './i18n'
+import { ToastContainer, toast } from 'react-toastify'
 
 function App() {
 
@@ -35,6 +36,20 @@ function App() {
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
 	};
+
+	const toaster = (type, data) =>{
+		const theme = localStorage.getItem('theme');
+		toast[type](data, {
+			position: "top-right",
+			autoClose: 7000,
+			hideProgressBar: false,
+			closeOnClick: false,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: theme,
+		});
+	}
 	
 	return (
 		<BrowserRouter>
@@ -43,11 +58,12 @@ function App() {
 				<div class="bg">
 					<Routes>
 						<Route path='/' element={<ContactList />}/>
-						<Route path='AddUser' element={<AddUser />}/>
+						<Route path='AddUser' element={<AddUser switch={{toaster}} />}/>
 						<Route path="*" element={<Page_404 />} />
 					</Routes>
 				</div>
 			</div>
+			<ToastContainer/>
 		</BrowserRouter>
 	)
 }

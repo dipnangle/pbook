@@ -566,11 +566,6 @@ video {
   margin: 1rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-8{
   margin-left: 2rem;
   margin-right: 2rem;
@@ -584,12 +579,12 @@ video {
   margin-top: 0.25rem;
 }
 
-.mt-5{
-  margin-top: 1.25rem;
-}
-
 .mt-4{
   margin-top: 1rem;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
 }
 
 .block{
@@ -1173,6 +1168,10 @@ body:is(.dark *){
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
 }
 
+.inputSelect .Toastify__toast-theme--dark {
+  background: #38344f;
+}
+
 .inputSelect::-moz-placeholder{
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity, 1));
@@ -1271,6 +1270,10 @@ body:is(.dark *){
 .red_text{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.dark .Toastify__toast-theme--dark {
+  background: #38344f !important;
 }
 
 .focus\:border-indigo-500:focus{

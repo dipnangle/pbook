@@ -152,3 +152,8 @@ body {
 .red_text{
 	@apply text-red-500
 }
+
+
+.dark .Toastify__toast-theme--dark {
+	background: #38344f !important;
+}
