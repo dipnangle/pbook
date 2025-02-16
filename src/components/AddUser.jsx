@@ -9,8 +9,6 @@ import { check_email } from '../utils/validation';
 function AddUser(props) {
     const { t } = useTranslation();
     const { register, handleSubmit, watch, formState: { errors }, setValue, trigger, control, reset } = useForm();
-    // const [responseData, setResponseData] = useState(null);
-    // const [phone_number, setphone_number] = useState("");
 
     const [isSubmitting, setIsSubmitting] = React.useState(false);
     const onSubmit = async (data) => {
