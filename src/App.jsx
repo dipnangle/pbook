@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import NavBar from './components/navbar'
+import NavBar from './components/NavBar'
 import AddUser from './components/AddUser'
 import ContactList from './components/ContactList'
+import EditUser from './components/EditUser'
 import Page_404 from './components/Page_404'
 import './Tailwind.css'
 import './i18n'
@@ -55,10 +56,11 @@ function App() {
 		<BrowserRouter>
 			<div className={`App ${theme}`}>
 				<NavBar switch={{toggleSwitch}} l={l} changeLanguage={changeLanguage}/>
-				<div class="bg">
+				<div className="bg">
 					<Routes>
-						<Route path='/' element={<ContactList />}/>
+						<Route path='/' element={<ContactList switch={{toaster}}/>}/>
 						<Route path='AddUser' element={<AddUser switch={{toaster}} />}/>
+						<Route path='EditUser/:id' element={<EditUser switch={{toaster}} />}/>
 						<Route path="*" element={<Page_404 />} />
 					</Routes>
 				</div>

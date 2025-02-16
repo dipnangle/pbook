@@ -16,6 +16,13 @@ export default {
         inset: "inset 0px 18px 22px",
         darkinset: "0px 4px 4px inset",
       },
+      width: {
+        "1/30": "3%",
+        "1/50": "5%",
+        "1/80": "8%",
+        "1/10": "10%",
+        "1/7": "15%",
+      },
     },
   },
   plugins: [],

@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0', // Or specify a specific IP like '192.168.1.100'
-    port: 3000,       // Optionally, specify a port (default is 3000)
+    port: 3000,       // Optionally, specify a port (default is 3000) 
   },
 })
