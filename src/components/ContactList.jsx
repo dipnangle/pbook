@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom';
-import ConfirmationModal from './confirmationModal';
+import ConfirmationModal from './ConfirmationModal';
 import Processing from './Processing';
 
 const ContactList = (props) => {
@@ -27,7 +27,7 @@ const ContactList = (props) => {
 		
 		set_loading(true);
 
-		fetch('http://192.168.0.205:5001/api/contacts')
+		fetch('http://192.168.1.23:5001/api/contacts')
 			.then((res) => {
 				if (!res.ok) {
 					// Handle HTTP errors
@@ -54,7 +54,7 @@ const ContactList = (props) => {
 
 		try {
 
-			const response = await fetch(`http://192.168.0.205:5001/api/contacts/delete_contact/${id}`, request_options);
+			const response = await fetch(`http://192.168.1.23:5001/api/contacts/delete_contact/${id}`, request_options);
 
 			console.log(response);
 
